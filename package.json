@@ -1,0 +1,14 @@
+{
+  "name": "hilyahs-home-schooling-guru-nila",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "netlify dev",
+    "check": "node --check netlify/functions/_auth.mjs && node --check netlify/functions/login.mjs && node --check netlify/functions/logout.mjs && node --check netlify/functions/me.mjs && node --check netlify/functions/guru-chat.mjs && node --check public/app.js && node --check public/voice.js && node --check public/storage.js && node --check public/sw.js"
+  },
+  "devDependencies": {
+    "netlify-cli": "^23.0.0"
+  }
+}
