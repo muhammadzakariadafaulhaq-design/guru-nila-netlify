@@ -1,0 +1,15 @@
+{
+  "name": "Hilyah's Home Schooling — Guru Nila",
+  "short_name": "Guru Nila",
+  "description": "Teman belajar bahasa Arab, murajaah, dan persiapan LIPIA.",
+  "lang": "id-ID",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8f5ff",
+  "theme_color": "#7561a8",
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

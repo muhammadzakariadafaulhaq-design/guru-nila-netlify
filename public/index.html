@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#7561a8">
+  <meta name="description" content="Hilyah's Home Schooling — Guru Nila, teman belajar bahasa Arab dan murajaah.">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/assets/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Guru Nila · Hilyah's Home Schooling</title>
+</head>
+<body>
+  <div class="page-glow glow-one"></div><div class="page-glow glow-two"></div>
+  <main class="shell">
+    <section id="login-screen" class="login-screen glass-card">
+      <div class="owl-logo" aria-hidden="true">🦉</div>
+      <p class="eyebrow">HILYAH'S HOME SCHOOLING</p>
+      <h1>Marhaban, Hilyah!</h1>
+      <p class="muted">Masuk ke ruang belajar pribadimu bersama Guru Nila.</p>
+      <form id="login-form" class="stack">
+        <label for="login-password">Kata sandi pribadi</label>
+        <input id="login-password" type="password" autocomplete="current-password" required minlength="1" placeholder="Masukkan kata sandi">
+        <button class="primary-button" type="submit">Masuk ke ruang belajar</button>
+        <p id="login-error" class="error-text" role="status"></p>
+      </form>
+      <p class="tiny muted">Akses dibatasi dengan kata sandi. Jangan bagikan tautan dan kata sandi aplikasi.</p>
+    </section>
+
+    <section id="app-screen" class="hidden">
+      <header class="topbar">
+        <div><p class="eyebrow">HILYAH'S HOME SCHOOLING</p><h1>Marhaban, Hilyah 🌷</h1><p class="muted">Belajar sedikit demi sedikit, dengan istiqamah.</p></div>
+        <button id="logout-button" class="quiet-button" type="button" aria-label="Keluar">Keluar</button>
+      </header>
+
+      <section class="hero-card glass-card">
+        <div class="hero-copy"><span class="pill">🦉 Guru Nila</span><h2>أَهْلًا وَسَهْلًا!</h2><p>أَنَا مُعَلِّمَتُكِ فِي اللُّغَةِ الْعَرَبِيَّةِ. هَيَّا نَتَعَلَّمْ مَعًا!</p><small class="muted">Guru bahasa Arabmu. Ayo belajar bersama.</small></div>
+        <div class="hero-owl" aria-hidden="true">🦉</div>
+      </section>
+
+      <nav class="tabs" aria-label="Menu utama">
+        <button class="tab-button active" data-tab="home" type="button">Beranda</button>
+        <button class="tab-button" data-tab="chat" type="button">Guru Nila</button>
+        <button class="tab-button" data-tab="murajaah" type="button">Murajaah</button>
+      </nav>
+
+      <section id="tab-home" class="tab-panel">
+        <div class="section-heading"><div><p class="eyebrow">SELASA · RUTINITAS HARIAN</p><h2>Langkah kecil hari ini</h2></div><span id="today-date" class="date-chip"></span></div>
+        <div class="stats-grid">
+          <article class="stat-card glass-card"><span>📚</span><strong id="task-progress">0/0</strong><small>Tugas selesai</small></article>
+          <article class="stat-card glass-card"><span>🌙</span><strong id="juz-progress">0/16</strong><small>Juz ditandai selesai</small></article>
+        </div>
+        <div class="glass-card panel-card"><div class="section-heading"><div><h3>Jadwal belajar</h3><p class="muted">Waktu shalat mengikuti jadwal setempat.</p></div><span class="pill">Hari ini</span></div><div id="task-list" class="task-list"></div></div>
+        <div class="glass-card panel-card"><div class="section-heading"><div><h3>Timer fokus</h3><p class="muted">Sesi belajar dan jeda yang seimbang.</p></div><span class="pill">⏳ Pomodoro</span></div><div class="timer-wrap"><div id="timer-display" class="timer-display">25:00</div><div class="button-row"><button id="timer-start" class="primary-button" type="button">Mulai</button><button id="timer-reset" class="quiet-button" type="button">Ulangi</button></div></div></div>
+      </section>
+
+      <section id="tab-chat" class="tab-panel hidden">
+        <div class="section-heading"><div><p class="eyebrow">ARABIC PRACTICE ROOM</p><h2>Berbincang dengan Guru Nila</h2><p class="muted">اِتَكَلَّمِي بِالْعَرَبِيَّةِ، وَلَا تَخَافِي مِنَ الْخَطَأِ.</p></div></div>
+        <div class="notice">Mode suara awal menggunakan fitur browser. Pengenal ucapan Arab mungkin tidak tersedia di semua browser. Ketik pesan selalu bisa digunakan.</div>
+        <div id="chat-messages" class="chat-messages" aria-live="polite"><div class="message assistant"><strong>Guru Nila 🦉</strong><p>مَرْحَبًا يَا هِلْيَةُ! كَيْفَ حَالُكِ الْيَوْمَ؟</p><button class="speak-button" data-speak="مَرْحَبًا يَا هِلْيَةُ! كَيْفَ حَالُكِ الْيَوْمَ؟" type="button">🔊 Dengarkan</button></div></div>
+        <form id="chat-form" class="chat-form"><textarea id="chat-input" rows="2" maxlength="3500" placeholder="اُكْتُبِي رِسَالَتَكِ بِالْعَرَبِيَّةِ..." aria-label="Pesan untuk Guru Nila"></textarea><div class="chat-actions"><button id="mic-button" class="quiet-button" type="button">🎙️ Bicara</button><button class="primary-button" type="submit">Kirim</button></div></form>
+        <p id="voice-status" class="tiny muted" role="status">Suara: siap.</p>
+      </section>
+
+      <section id="tab-murajaah" class="tab-panel hidden">
+        <div class="section-heading"><div><p class="eyebrow">QUR'AN REVIEW</p><h2>Tracker 16 juz</h2><p class="muted">Tandai setelah murajaah dilakukan. Ini catatan pribadi, bukan penilaian kualitas hafalan.</p></div></div>
+        <div class="glass-card panel-card"><div class="progress-track"><span id="juz-progress-bar"></span></div><div id="juz-list" class="juz-grid"></div></div>
+        <div class="glass-card panel-card"><h3>Catatan murajaah</h3><textarea id="murajaah-notes" rows="4" placeholder="Tulis bagian yang perlu diulang, ayat pengingat, atau catatan guru..."></textarea><button id="save-notes" class="primary-button" type="button">Simpan catatan di perangkat</button><p id="notes-status" class="tiny muted"></p></div>
+      </section>
+      <footer class="footer muted">Guru Nila · Versi awal Netlify · Data belajar tersimpan di browser perangkat ini.</footer>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
